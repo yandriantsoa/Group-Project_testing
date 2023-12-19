@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wondering Weather</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="assigned.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+	<style>
+        img {
+            height: 350px;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 align="center">Wondering Weather</h1>
+    </div>
+
+    <nav>
+        <a href="index.html">HOME</a> |
+        <a href="documentation.html">ABOUT</a>
+    </nav>
+
+    <div class="row noMargin">
+        <!--chart one-->
+        <div class="one">
+            <canvas id="weatherChart" style="width:100%;max-width:700px"></canvas>
+           <!-- <img src="imgs/weather.png" alt="Weather Image">-->
+        </div>
+
+        <!--chart two -->
+        <div class="two">
+            <canvas id="secondChart" style="width:100%;max-width:700px"></canvas>
+        </div>
+    </div>
+
+    <!--chart three-->
+    <div class="row noMargin">
+        <div class="three">
+            <canvas id="thirdChart" style="width:100%;max-width:700px"></canvas>
+        </div>
+
+        <!--chart four -->
+        <div class="four">
+            <canvas id="fourthChart" style="width:100%;max-width:700px"></canvas>
+        </div>
+    </div>
+<script src="weather.js">
+	/*
+const apiLink = 'https://api.weather.gov/gridpoints/TOP/32,81/forecast/hourly';
+
+fetch(apiLink)
+.then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    // data.list to access the information
+	const time = data.properties.UpdateTime;
+    const temperature = data.properties.temperature;
+	//wanna wrap everything in the then so it is one scope 
+
+const firstChart = new Chart("firstChart", {
+	type: "line",
+	data: {
+		labels: time,
+  datasets: [
+    {
+      label: 'Temp',
+      data: temperature,
+      backgroundColor: 'rgba(75, 192, 192, 0.2)', // Adjust color as needed
+      borderColor: 'rgba(75, 192, 192, 1)', // Adjust color as needed
+      borderWidth: 1,
+    },
+  ],
+	},
+	options: {
+		scales: {
+			x: {
+			  type: 'time',
+			  time: {
+				unit: 'hour',
+				displayFormats: {
+				  hour: 'MMM D h:mm A',
+				},
+			  },
+			  title: {
+				display: true,
+				text: 'Time',
+			  },
+			},
+			y: {
+			  title: {
+				display: true,
+				text: 'Temp',
+			  },
+			},
+		  },
+	}
+  });
+*/
+
+/*
+const apiLink = 'https://api.weather.gov/points/39.7456,-97.0892';
+
+fetch(apiLink)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Check the actual structure of the data returned by the API
+    console.log(data);
+
+    // Access properties from the data
+    const time = data.forecastHourly.properties.ValidTimes;
+    const temperature = data.properties.temperature;
+
+    // Initialize Chart.js
+    const firstChart = new Chart("firstChart", {
+      type: "line", 
+      data: {
+        labels: time,
+        datasets: [
+          {
+            label: 'Temp',
+            data: temperature,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          x: {
+            type: 'time',
+            time: {
+              unit: 'hour',
+              displayFormats: {
+                hour: 'MMM D h:mm A',
+              },
+            },
+            title: {
+              display: true,
+              text: 'Time',
+            },
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Temp',
+            },
+          },
+        },
+      },
+    });
+  })
+  .catch(error => console.error('Error fetching data:', error));
+*/ 
+ 
+    
+
+  // old placement of code before re
+/*const secondChart = new Chart("secondChart", {
+	type: "bar",
+	data: {
+		labels: timestamps,
+  datasets: [
+    {
+      label: 'Cloudiness (%)',
+      data: cloudiness,
+      backgroundColor: 'rgba(75, 192, 192, 0.2)', // Adjust color as needed
+      borderColor: 'rgba(75, 192, 192, 1)', // Adjust color as needed
+      borderWidth: 1,
+    },
+  ],
+	},
+	options: {
+		scales: {
+			x: {
+			  type: 'time',
+			  time: {
+				unit: 'hour',
+				displayFormats: {
+				  hour: 'MMM D h:mm A',
+				},
+			  },
+			  title: {
+				display: true,
+				text: 'Time',
+			  },
+			},
+			y: {
+			  title: {
+				display: true,
+				text: 'Cloudiness (%)',
+			  },
+			},
+		  },
+	}
+  });
+
+//
+
+const thirdChart = new Chart("thirdChart", {
+	type: "line",
+	data: {
+		labels: timestamps,
+		datasets: [
+		  {
+			label: 'Temperature (K)',
+			data: temperatures,
+			borderColor: 'rgba(75, 192, 192, 1)', // Adjust color as needed
+			fill: false,
+		  },
+		],
+	  },
+	options: {  scales: {
+		x: {
+		  type: 'time',
+		  time: {
+			unit: 'hour',
+			displayFormats: {
+			  hour: 'MMM D h:mm A',
+			},
+		  },
+		  title: {
+			display: true,
+			text: 'Time',
+		  },
+		},
+		y: {
+		  title: {
+			display: true,
+			text: 'Temperature (K)',
+		  },
+		},
+	  },
+	}
+  });
+//
+
+const fourthChart = new Chart("fourthChart", {
+	type: "doughnut",
+	data: {
+		labels: uniqueConditions,
+		datasets: [
+		  {
+			data: conditionCounts,
+			backgroundColor: [
+			  'rgba(255, 99, 132, 0.5)',
+			  'rgba(75, 192, 192, 0.5)',
+			  'rgba(255, 205, 86, 0.5)',
+			  // Add more colors as needed
+			],
+		  },
+		],
+	},
+	options: {
+		title: {
+			display: true,
+			text: 'Weather Conditions Distribution',
+		  },
+	},
+	//  }
+//	}
+ });*/
+
+
+</script>
+    <footer></footer>
+</body>
+
+</html>

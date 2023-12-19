@@ -1,0 +1,49 @@
+.row {
+    display: flex;
+    width: 100%;
+    border-style:double;
+  }
+  
+  .row div {
+    width: 50%;
+    border-style: double;
+  }
+  
+  .noMargin {
+    margin: 0px;
+  }
+  
+  .one {
+    /*background-color: red;*/
+    height:500px;
+  }
+  
+  .two {
+    /*background-color: yellow;*/
+    height:500px;
+  }
+  
+  .three {
+   /* background-color: green; */
+    height:500px;
+  }
+  
+  .four {
+    /*background-color: blue;*/
+    height:500px;
+  }
+  
+  
+  nav {
+    background-color: grey;
+    height: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color:rgb(191, 216, 237);
+    
+  }
+  
+  
+  #map { height: 180px; }
