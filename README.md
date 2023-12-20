@@ -25,10 +25,11 @@ Wondering Weather is a web application that displays current weather data using 
 ## Running the Application
 
 ### To run the application, follow these steps:
+Make sure you are in the correct directory.
 
 1. npm start
 
-2. enter this link into your preferred brower: http://localhost:4000/index.html
+2. enter this link into your preferred brower: http://localhost:4000/
 
 ## Running Tests
 
