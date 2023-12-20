@@ -3,7 +3,7 @@
 # Wondering Weather 
 
 ## Description
-Wondering Weather is a web application that displays weather data using the OpenWeatherMap API. It visualizes various weather parameters through interactive charts created with the Chart.js library. The application was made primarily for computer based browsers.
+Wondering Weather is a web application that displays current weather data using the OpenWeatherMap API. It visualizes various weather parameters through interactive charts created with the Chart.js library. The application was made primarily for computer based browsers. This website always for a nice visual way to check out the weather of the day! 
 
 ## Table of Contents
 - [Installation](#installation)
@@ -40,7 +40,7 @@ we never set up any tests to test this application.
 specifically - we are using this team statistics one: https://api.openweathermap.org/data/2.5/forecast?id=524901
 
 ## Known Bugs
-There are currently no know bugs with the software
+There are issues with displaying the table of our connected database. 
 
 ## Future Development Roadmap
 
