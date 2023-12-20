@@ -36,8 +36,11 @@ we never set up any tests to test this application.
 
 ## API Endpoints
 
-[api](https://api.openweathermap.org/data/2.5/forecast)
-specifically - we are using this team statistics one: https://api.openweathermap.org/data/2.5/forecast?id=524901
+[1st api](https://api.openweathermap.org/data/2.5/forecast)
+[2nd api](https://www.weather.gov/documentation/services-web-api#/default/alerts_active_count)
+
+Both APIs are related to data to showcase current weather data nationally and of a specific city. 
+
 
 ## Known Bugs
 There are issues with displaying the table of our connected database. 
@@ -70,3 +73,6 @@ There are issues with displaying the table of our connected database.
 
     Data Export
         - Implement a feature that allows users to export weather data and charts in common formats such as CSV or PDF.
+
+
+Extra Credit: added CSS animations on both pages!
