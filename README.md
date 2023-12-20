@@ -78,4 +78,4 @@ There are issues with displaying the table of our connected database.
 
 Extra Credit: added CSS animations on both pages!
 
-Team Members: Sehba Wani, Yannrick A, Hasan Edwan
+Team Members: Sehba Wani, Yannrick Andriantsoa, Hasan Edwan

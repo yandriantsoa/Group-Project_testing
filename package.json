@@ -7,7 +7,7 @@
     "start": "nodemon -e '*'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Yan Andrian",
+  "author": "Yannrick Andriantsoa, Sehba Wani, Hassan Edwan",
   "license": "ISC",
   "dependencies": {
     "@supabase/supabase-js": "^2.39.1",
