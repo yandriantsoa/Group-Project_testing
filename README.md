@@ -1,4 +1,4 @@
-- [group project delivereable copy w/notes](https://docs.google.com/document/d/1VpfteSBRwUonDe6rxDZ1UfysWHB6YdmKFGWBpRP90kA/edit?usp=sharing) um
+
 
 # Wondering Weather 
 
